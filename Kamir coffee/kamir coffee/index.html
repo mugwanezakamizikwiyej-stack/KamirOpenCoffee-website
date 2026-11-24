@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-decoration: none;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: #110d17;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230815be' fill-opacity='0.82'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            width: 100%;
+            height:1050vh;
+        }
+        header{
+             position: fixed;
+             height:100px;
+             width: 100%;
+             background-image: linear-gradient(rgba(255, 0, 0, 0.171) , rgba(0, 0, 255, 0.26));
+             z-index: 111111;
+             
+         
+
+        }
+        header h1{
+            font-size: large;
+            color: rgb(248, 248, 247);
+            text-shadow: 3px 2px 1px rgba(240, 19, 3, 0.459);
+            font-style:oblique;
+            margin-top: 20px;
+            position:relative;
+            z-index: 11;
+            left: 45px;
+        }
+        .s1{
+            height: 6vh;
+            width: 4px;
+            background-color: yellow;
+            position: absolute;
+            translate: 30px;
+
+        }
+        .s2{
+            height: 4vh;
+            width: 4px;
+            background-color: rgb(255, 0, 55);
+            position: absolute;
+            translate: 38px;
+        }.s3{
+            height: 2.7vh;
+            width: 4px;
+            background-color: rgb(0, 255, 234);
+            position: absolute;
+            translate: 45px;
+
+        }
+
+
+
+        .s4{
+            height: 0.8vh;
+            width: 4px;
+            background-color: yellow;
+            position: absolute;
+            translate: 210px;
+            top: 15px;
+            border-radius: 50%;
+
+        }
+        .s5{
+            height: 0.8vh;
+            width: 4px;
+            background-color: rgb(255, 0, 55);
+            position: absolute;
+            translate: 220px;
+            top: 15px;
+            border-radius: 50%;
+
+
+        }.s6{
+            height: 0.8vh;
+            width: 4px;
+            background-color: rgb(0, 255, 234);
+            position: absolute;
+            translate: 230px;
+            top: 15px;
+            border-radius: 50%;
+
+
+
+        }
+
+        .s7{
+            height: 0.8vh;
+            width: 4px;
+            background-color: yellow;
+            position: absolute;
+            translate: 210px;
+            top: 25px;
+            border-radius: 50%;
+
+
+        }
+        .s8{
+            height: 0.8vh;
+            width: 4px;
+            background-color: rgb(255, 0, 55);
+            position: absolute;
+            translate: 220px;
+            top: 25px;
+            border-radius: 50%;
+
+
+        }.s9{
+            height: 0.8vh;
+            width: 4px;
+            background-color: rgb(0, 255, 234);
+            position: absolute;
+            translate: 230px;
+            top: 25px;
+            border-radius: 50%;
+
+
+
+        }
+
+        .s10{
+            height: 0.8vh;
+            width: 4px;
+            background-color: yellow;
+            position: absolute;
+            translate: 210px;
+            top: 35px;
+            border-radius: 50%;
+
+
+        }
+        .s11{
+            height: 0.8vh;
+            width: 4px;
+            background-color: rgb(255, 0, 55);
+            position: absolute;
+            translate: 220px;
+            top: 35px;
+            border-radius: 50%;
+
+
+        }.s12{
+            height: 0.8vh;
+            width: 4px;
+            background-color: rgb(0, 255, 234);
+            position: absolute;
+            translate: 230px;
+            top: 35px;
+            border-radius: 50%;
+
+
+
+        }
+
+
+
+        header h2{
+            position: relative;
+            font-size: 13px;
+            margin: 23px 13px;
+            font-family:cursive;
+            color: yellow;
+        }
+
+        .container{
+            position: relative;
+            /* padding-top: 46px; */
+            
+
+        }
+        .nav-container{
+            position: relative;
+            text-align: center;
+            width: 100%;
+
+
+        }
+        .nav-container li{
+            position: relative;
+            display:inline-flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            top: 4px;
+
+        }
+        .nav-container li a{
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+        .nav-container li a:hover{
+            color: blue;
+        }
+        #p0 {
+            position: relative;
+        }
+        
+        #p1{
+            position: relative;
+            color: red;
+
+        }
+        #p1:hover{
+            color: blue;
+        }
+       
+
+
+        #p1:hover .p2{
+            position: relative;
+            display: block;
+        }
+
+
+        .p2 {
+            position: relative;
+            width: 110px;
+            height: 33vh;
+            background-color: yellowgreen;
+            top: 12px;
+            right: 14px;
+            border-radius: 7px;
+            display: none;
+
+
+
+        }
+       
+        .p2 a{
+            display: block;
+            margin: 12px;
+            padding: 6px;
+
+
+        }
+        .p2 a:hover{
+            color: blue;
+        }
+
+
+
+
+
+       
+       
+
+      
+
+
+       
+      
+       
+       
+
+        
+        
+
+
+
+
+
+
+
+
+
+        .number-one{
+            position: relative;
+            width: 100%;
+            max-height: 204vh;
+            /* background-color: greenyellow; */
+
+        }
+     
+        .number-two{
+            position: relative;
+            width: 100%;
+            max-height: 190vh;
+            /* background-color: red; */
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            align-content: center;
+            justify-content: space-around;
+            padding-top: 50px;
+
+            
+            
+            
+
+
+        }
+        
+        
+        .number-two h1{
+            font-size: 40px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            margin-bottom: 22px;
+
+            
+        }
+        .number-two{
+            position: relative;
+        }
+        .number-two i{
+            font-size: 5px;
+        }
+        .number-two h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            top: -5px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .number-two h1 span{
+            color: yellow;
+            font-style: oblique;
+        }
+       
+        .number-three{
+            color: rgba(252, 252, 252, 0.651) ;
+            text-shadow:1px 0px 0px rgb(44, 4, 223);
+            color: rgb(255, 255, 255);
+            width: 50%;
+            max-height: 135vh;
+            text-align: left;
+            align-items: left;
+            justify-content: left;
+            /* background-color: gray; */
+            margin-top: 53px;
+            z-index: 1111;
+            padding-top: 180px;
+            
+           
+
+        }
+        #btn{
+            position: relative;
+
+        }
+        #btn1{
+            position: relative;
+            height: 7vh;
+            width: 170px;
+            background-color: yellow;
+            color: blue;
+            font-size: medium;
+            font-weight: 600;
+            margin: 15px 45px 45px 0px;
+            border: none;
+            border-radius: 10px;
+        }
+        #btn1 i{
+            position: relative;
+            background-color: yellow;
+            border-radius: 50%;
+            color: black;
+            height: 3vh;
+            font-size: 16px;
+            transform: rotate(-45deg);
+        }
+        #btn2{
+            position: relative;
+            width: 80px;
+            height: 24vh;
+            background-color: red;
+            transform: translateY(45px);
+            transform: translateX(80px), translateY(-45px);
+            opacity: 1;
+            transition-delay: 0s ;
+            transition-duration: 1s;
+            border-radius:  30% 45% 20%;
+        }
+        #btn1:hover #btn2{
+            color: rgba(0, 47, 255, 0.986);
+            font-size: medium;
+            background-color: rgba(255, 255, 0, 0.678);
+            transform: translateY(-45px);
+            transition-delay: 1s ;
+            transition-duration: 1s;
+            transform: translateX(-80px), translateY(45px);
+            opacity: 1;
+            position: relative;
+            
+            
+
+        }
+        #images{
+            position: relative;
+            margin-top: 53px;
+            overflow-x: hidden;
+
+            
+            
+           
+
+        }
+        #images img{
+            position: relative;
+            z-index: 11;
+
+        }
+        .number-three p{
+            position: relative;
+            color: rgba(252, 252, 252, 0.651) ;
+            text-shadow:1px 0px 0px rgb(44, 4, 223);
+            line-height: 21px;
+        }
+        .number-four{
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            /* background-color: white; */
+            text-align: center;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        
+
+
+        }
+        .number-four{
+            position: relative;
+        }
+        .number-four i{
+            font-size: 5px;
+        }
+        .number-four h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            top: 45px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .number-five{
+            position: relative;
+            display: flex;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            margin-top: 53px;
+            /* background-color: white; */
+            
+            
+        }
+        
+        .one{
+            position: relative;
+            padding: 34px;
+            width: 200px;
+            height: 7vh;
+            color: white;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            background-image: linear-gradient(rgba(238, 223, 223, 0.171) , rgba(0, 0, 255, 0.26));
+            margin: 17px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: repeat(minmax, 1fr);
+            grid-template-rows: 2fr 1fr  ;
+            gap: 12px;
+            border: 1px solid rgb(206, 201, 201);
+            font-size: 13px;
+
+
+        }
+        #cards{
+            position: relative;
+
+        }
+
+        .number-six{
+            position: relative;
+            max-height: 590vh;
+            width: 100%;
+            margin-top: 100px;
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 300px);
+            gap: 24px;
+            justify-content: center;
+            /* background-color: red; */
+                       
+           
+            
+        }
+        
+        .export{
+            position: relative;
+            width: 30%;
+            height: 23vh;
+            /* background-color: rebeccapurple; */
+            left: 48px;
+        }
+        .export i{
+            font-size: 5px;
+            
+        }
+        .export h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .export h1{
+            position: relative;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            font-size: 30px;
+            
+        }
+        /* .number-six h1{
+            position: relative;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            font-size: 30px;
+        } */
+        .web{
+            position: relative;
+            color: white;
+            width: 300px;
+            height: 53vh;
+            background:linear-gradient(to left bottom ,black 78%, rgba(255, 0, 0, 0.514) );
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 8px 13px  1px yellow;
+
+
+        }
+        .web img{
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+
+        }
+        .span{
+            position: relative;
+            width: 310px ;
+            height: 53vh;
+            background-color: rgb(0, 77, 128);
+            text-align: center;
+            top: -50%;
+            left: 87%;
+            transform: translate(-90%,-60%);
+            justify-content: center;
+            border-radius: 50% 59%  ;
+            transform:  translateY(134px);
+            transition: ease-in;
+            transition-duration: 1s;
+            transition-delay: 1s;
+            rotate: 95px;
+            opacity: 0;
+            /* transform: translateX(295px), translateY(-45px); */
+            overflow:hidden ;
+            padding: 39px;
+
+
+
+        }
+        .span h3  {
+            text-align: center;
+            position: relative;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(3, 247, 44);
+            font-size: 27px;
+
+        }
+        .span p {
+            text-align: center;
+            position: relative;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+
+        }
+        .web:hover .span{
+           position: relative;
+           background-color: mediumvioletred;
+           transform:  translateX(-249px);
+           transition: ease-in-out;
+           transition-delay: 0s;
+           transition-duration: 0s;
+           opacity: 1;
+           width: 366px;
+           height: 65vh;
+           overflow: hidden;
+           border-radius: 79% 61%  50%;
+           padding-bottom: 194px;
+           rotate: -95px;
+
+
+
+
+
+        }
+
+
+
+
+        .number-seven{
+            position: relative;
+            width: 100%;
+            height: 129vh;
+            margin-top: 70px;
+            /* background-color: rgba(255, 255, 255, 0.5); */
+            padding: 45px;
+            display: inline-block;
+            text-align: center;
+            align-items: center;
+        }
+        .number-seven  h1{
+            position: relative;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            font-size: 30px;
+            top: -30px;
+        }
+        .number-seven{
+            position: relative;
+        }
+        .number-seven i{
+            font-size: 5px;
+
+        }
+        .number-seven h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            top: -18px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+         
+        .number-eight{
+            position: relative;
+            width: 100%;
+            height: 109vh;
+            display: flex;
+            overflow:hidden;
+            
+
+        }
+        .number-eight h4{
+            position: relative;
+            height: 26vh;
+            width: 110px;
+            font-size: 15px;
+            margin-right: 20px;
+            text-align: left;
+            align-content: left;
+            justify-content: left;
+            line-height: 25px;
+            display: inline-block;
+            font-style:normal;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        }
+        
+        .number-nine{
+            position: relative;
+            max-width: 1500px;
+            height: 190vh;
+            text-align:left ;
+            align-content: left;
+            margin-left: 15px;
+            
+
+
+           
+            
+
+            
+        }
+        .para1{
+            position: relative;
+            font-size: medium;
+            line-height:95px;
+            display: flex;
+            
+
+
+        }
+        .para1 h3{
+            font-size: x-large;
+            margin-top: -12px;
+            font-style: oblique;
+            color: rgba(126, 126, 117, 0.938);
+            
+
+        }
+        .para1 p{
+            position: relative;
+            line-height: 17px;
+            margin-top: 15px;
+            padding: 23px;
+            font-size: medium;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 0px 0px rgb(44, 4, 223);
+            
+        }
+        .number-ten{
+            position: relative;
+            max-width: 1200px;
+            left: -20px;
+            z-index: 1111;
+            
+        }
+        #video{
+            position: relative;
+            z-index: 111;
+            border-radius: 10px;
+        }
+      
+        #videos{
+            position: relative;
+            width: 300px;
+            height: 98vh;
+            background-color:yellow ;
+            top: -619px;
+            transform: translateX(119px);
+            border-radius: 10px;
+            z-index: 11;
+            
+            
+        }
+        #partener{
+            position: relative;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        #partener i{
+            font-size: 5px;
+
+        }
+        #partener h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            top: -20px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .number-eleven{
+            width: 80%;
+            /* background-color:red ; */
+            margin: auto;
+            overflow: hidden;
+            padding: 10px 0;
+            display: flex;
+            
+
+                     
+            
+            
+        }
+
+        .number-eleven::-webkit-scrollbar{
+            display: none;
+        }
+
+        .number-twelve{
+            display: flex;
+            animation: cube 10s infinite  linear ;
+           
+
+        }
+        
+        .division{
+            flex: 0 0 13rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 20px;
+            margin: 0 10px;
+
+        }
+        
+
+        @keyframes cube{
+            0%{
+                transform: translate(0);
+            }
+            100%{
+                transform: translate(-50%);
+
+            }
+        }
+        .number-eleven:hover .number-twelve{
+            animation-play-state: paused;
+        }
+
+        #side{
+            position: relative;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            top: 80px;
+            width: 100%;
+        }
+        #side i{
+            font-size: 5px;
+
+        }
+        #side h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        
+
+
+        #number-twenty-eight{
+            position: relative;
+            width: 100%;
+            height: auto;
+            /* background-color: rgba(148, 158, 10, 0.589); */
+            margin-top: 90px;
+            display:flex;
+            flex-wrap: wrap;
+           
+           
+                    
+
+        }
+        
+        #number-twenty-nine{
+            position: relative;
+            width: 100%;
+            height: auto;
+            /* background-color: yellowgreen; */
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+            
+            
+            
+        
+            
+        }
+        #thirty{
+            position: relative;
+            display: inline-block;
+            background-color: rgba(43, 43, 44, 0.247);
+            height:84vh ;
+            width: 280px;
+            margin: 30px;
+            text-align: left;
+            align-content: left;
+            justify-content: left;
+            padding: 13px;
+            border-radius: 10px;
+            border: none;
+
+           
+
+        }
+        
+        #thirty{
+            position: relative;
+        }
+        #thirty i{
+            font-size: 5px;
+
+        }
+        #thirty h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+         
+
+        #thirty h3{
+            position: relative;
+            padding-bottom: 23px;
+            margin-top: 10px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        }
+      
+        #thirty p{
+            position: relative;
+            padding: 7px;
+            line-height: 19px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgba(44, 4, 223, 0.219);
+            
+        }
+        #thirtyyy{
+            position: relative;
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.993);
+            height:86vh;
+            width: 280px;
+            text-align: left;
+            align-content: left;
+            justify-content: left;
+            padding: 13px;
+            border-radius: 10px;
+            border:none;
+            color: white;
+        }
+        #thirtyyy{
+            position: relative;
+        }
+        #thirtyyy i{
+            font-size: 5px;
+
+        }
+        #thirtyyy h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+         
+
+        #thirtyyy h3{
+            position: relative;
+            padding-bottom: 23px;
+            margin-top: 10px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        }
+      
+        #thirtyyy p{
+            position: relative;
+            padding: 7px;
+            line-height: 19px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgba(44, 4, 223, 0.219);
+            
+        }
+
+       
+       
+       
+
+        #number-sixteen{
+            position: relative;
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            height:auto;
+            /* background-color: rgb(252, 7, 7); */
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 150px;
+        }
+        #number-sixteen{
+            position: relative;
+        }
+        #number-sixteen i{
+            font-size: 5px;
+
+        }
+        #number-sixteen h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+       
+        #number-sixteen h1{
+            position: relative;
+            top: -56px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        } 
+        #number-seventeen{
+            position: relative;
+            width: 80%;
+            align-items: center;
+            align-items: center;
+            justify-items: center;
+            height:auto;
+            padding: 10px;
+            /* background-color: darkmagenta; */
+            margin:100px ;
+           
+
+        }
+        
+        #number-eighteen{
+           position: relative;
+
+        }
+        #number-nineteen{
+            position: relative;
+            width: 300px;
+            height: 43vh;
+            background-image: linear-gradient( to left bottom, rgba(10, 41, 1, 0.281) 3%, rgba(65, 63, 185, 0.192) 12%, rgba(7, 3, 3, 0.5) 30%);
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+            border-radius: 10px;
+            margin: 14px;
+            display: inline-block;
+            border: none;
+            padding:25px ;
+            
+        }
+        #number-nineteen img{
+            position: relative;
+            border-radius: 50%;
+            border: 2px solid rgba(242, 243, 241, 0.945);
+
+        } 
+        #number-nineteen h4{
+            position: relative;
+            border-radius: 50%;
+            color: yellow;
+            text-shadow:2px 0px 0px rgb(44, 4, 223);
+            line-height: 21px;
+
+        } 
+        #number-nineteen h6{
+            position: relative;
+            border-radius: 50%;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            line-height: 21px;
+            font-weight: 500;
+            font-style: oblique;
+            font-style: 150px;
+            letter-spacing: 2px;
+
+        } 
+
+
+
+
+
+        /* this is new paragraph */
+
+
+        #number-twenty{
+            position: relative;
+            text-align: center;
+            align-content: center;
+            justify-items: center;
+            width: 100%;
+            height:auto;
+            /* background-color: rgb(0, 60, 255); */
+            display: inline-block;
+            padding-top: 150px;
+        }
+        #number-twenty{
+            position: relative;
+        }
+        #number-twenty i{
+            font-size: 5px;
+
+        }
+        #number-twenty h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #number-twenty h1{
+            position: relative;
+            top: -56px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        } 
+        #number-twenty-one{
+            position: relative;
+            width: 100%;
+            align-items: center;
+            align-items: center;
+            justify-content: space-around;
+            height:auto;
+            padding: 10px;
+            /* background-color: darkmagenta; */
+            margin:100px ;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-x: hidden;
+
+
+        }
+     
+        #number-twenty-two{
+            position: relative;
+            width: 50%;
+            max-height: 183vh;
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            /* background-color: yellowgreen; */
+            
+            
+        }
+        #number-twenty-two img{
+            position: relative;
+            margin-top: -83px;
+            text-align: left;
+            align-content: left;
+            justify-content: left;
+
+
+        } 
+
+        #number-twenty-three {
+            position: relative;
+            height: auto;
+            width: 400px;
+            /* background-color: rgba(2, 131, 170, 0.432); */
+            line-height: 21px;
+
+        } 
+        #number-twenty-three  span{
+              position: relative;
+              height: 3vh;
+              width: 12px;
+              text-align: center;
+              align-items: center;
+              text-shadow:2px 3px 0px rgba(44, 4, 223, 0.007);
+        }
+       
+        #number-twenty-three  p{
+            position: relative;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            line-height: 21px;
+            font-weight: 500;
+            font-style: normal;
+            font-style: 150px;
+            letter-spacing: 2px;
+            line-height: 21px;
+            text-align: left;
+            align-content: left;
+            justify-content: left;
+            padding: 7px;
+
+
+        } 
+
+
+        /* this is pricing level */
+
+
+        #number-twenty-four{
+            position: relative;
+            text-align: center;
+            align-content: center;
+            justify-content:center;
+            width: 100%;
+            height:auto;
+            /* background-color: rgb(0, 60, 255); */
+            display: inline-block;
+            padding-top: 150px;
+        }
+        #number-twenty-four h1{
+            position: relative;
+            top: -56px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        } 
+        #number-twenty-four{
+            position: relative;
+        }
+
+        #number-twenty-four i{
+            font-size: 5px;
+
+        }
+        #number-twenty-four h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+
+
+        #number-twenty-five{
+            position: relative;
+            width: 90%;
+            align-items: center;
+            align-items: center;
+            justify-content: space-around;
+            height:auto;
+            background-image: url("AQNCb3tLA6VEsWsq4pOGLJeij5gKTfjD1mpRlcECpaZoJ-a8uLhRVxyPqSO7nCHYTdXq_M6OGRmu41aopwl7Yoin.mp4");
+            margin:auto ;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-x: hidden;
+
+
+        }
+
+        #number-twenty-six {
+            position: relative;
+            height: auto;
+            width: 500px;
+            /* background-color: rgba(2, 131, 170, 0.432); */
+            line-height: 21px;
+            margin:12px ;
+
+        } 
+        #number-twenty-six  span{
+              position: relative;
+              height: 3vh;
+              width: 12px;
+              text-align: left;
+              align-items: left;
+              text-shadow:2px 3px 0px rgba(44, 4, 223, 0.007);
+        }
+       
+        #number-twenty-six  p{
+            position: relative;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+            line-height: 21px;
+            font-weight: 500;
+            font-style: normal;
+            font-style: 150px;
+            letter-spacing: 2px;
+            line-height: 21px;
+            text-align: left;
+            align-content: left;
+            justify-content: left;
+            padding: 7px;
+
+
+        } 
+
+        #number-twenty-seven{
+            position: relative;
+            width: 40%;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            /* background-color: yellowgreen; */
+            
+            
+        }
+        #number-twenty-seven img{
+            position: relative;
+            
+
+
+        } 
+
+
+
+
+
+
+
+
+
+        /* this is more about branches of business coffee */
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        #sides{
+            position: relative;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            top: 80px;
+            width: 100%;
+        }
+        #sides h1{
+            font-size: 40px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        }
+        #sides i{
+            font-size: 5px;
+
+        }
+        #sides h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        
+
+
+        #number-twenty-eight{
+            position: relative;
+            width: 100%;
+            height: auto;
+            /* background-color: rgba(148, 158, 10, 0.589); */
+            margin-top: 90px;
+            
+           
+           
+                    
+
+        }
+        
+        #number-twenty-nine{
+            position: relative;
+            width: 100%;
+            height: auto;
+            /* background-color: yellowgreen; */
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+            display:flex;
+            flex-wrap: wrap;
+            
+            
+            
+        
+            
+        }
+        #thirtyy{
+            position: relative;
+            display: inline-block;
+            /* background-color: rgba(43, 43, 44, 0.247); */
+            height:84vh ;
+            width: 280px;
+            margin: 30px;
+            text-align: left;
+            align-content: left;
+            justify-content: left;
+            padding: 13px;
+            border-radius: 10px;
+            border: none;
+
+           
+
+        }
+        
+        #thirtyy{
+            position: relative;
+        }
+        #thirtyy i{
+            font-size: 5px;
+
+        }
+        #thirtyy h5{
+            position: relative;
+            color:rgba(202, 202, 202, 0.603);
+            padding: 4px;
+            font-size: 11px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+         
+
+        #thirtyy h3{
+            position: relative;
+            padding-bottom: 23px;
+            margin-top: 10px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgb(44, 4, 223);
+        }
+        
+
+        #thirtyy p{
+            position: relative;
+            padding: 7px;
+            line-height: 19px;
+            color: rgb(247, 240, 240) ;
+            text-shadow:2px 3px 0px rgba(44, 4, 223, 0.219);
+            
+        }
+        #thin{
+            position: relative;
+            width:400px ;
+            height: auto;
+        }
+        #thin img{
+            position: relative;
+            margin-left: -45px;
+        }
+
+       
+         
+
+
+
+         
+       
+        
+        
+       
+
+
+      
+
+
+
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+
+
+    </style>
+    <title>KAMIR Business Coffee</title>
+</head>
+<body>
+ 
+    <header>
+        <h1>KAMIR <small>Open Coffee</small></h1>
+        <span class="s1"></span>
+        <span class="s2"></span>
+        <span class="s3"></span>
+
+        <span class="s4"></span>
+        <span class="s5"></span>
+        <span class="s6"></span>
+
+        
+        <span class="s7"></span>
+        <span class="s8"></span>
+        <span class="s9"></span>
+
+        
+        <span class="s10"></span>
+        <span class="s11"></span>
+        <span class="s12"></span>
+
+
+        <div class="container">
+            <nav class="nav-container">
+
+                        <li> 
+                            <div id ="p0">
+
+                                <a id="p1" href="">Home
+                               
+                                    <div class ="p2">
+                                        <a href="">Home1</a>
+                                        <a href="">Home2</a>
+                                        <a href="">Home3</a>
+                                        <a href="">Home4</a>
+    
+                                    </div>
+         
+    
+    
+    
+    
+                                </a>
+
+                            </div>
+                                
+                        </li>
+                           
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Price</a></li>
+                        <li><a href="">Contact</a></li>
+
+
+                           
+
+                         
+                               
+               
+
+                   
+
+            </nav>
+        </div>
+    </header>
+
+
+    <section class ="number-one">
+        <div class="number-two">
+
+
+            <div class="number-three">
+            <h5><i class="fa-solid fa-circle"></i> Delicious Coffee,Our work</h5>
+
+                <h1>Grown in <span>Rwanda's highlands,</span> our coffee delivers outstanding quality.</h1>
+
+                <p>Discover the rich taste and unique aroma of Rwanda's finest coffee. Grown in the beautiful highlands of Rwanda and carefully selected from local farmers, our coffee brings quality, freshness, and authenticity to every cup.
+
+                    Whether you love a strong espresso or a smooth, refreshing cup, we have the perfect coffee for you.</p>
+
+                    <div id="btn">
+                        <button id="btn1">Book Your Coffee <i class="fa-solid fa-arrow-right"></i></button>
+                     </div>
+            </div>
+             
+            <div id="images">
+                <img src="./vectors.png" width="480">
+            </div>
+
+           
+        </div>
+   
+    </section>
+
+    <section class="number-four">
+        <h5><i class="fa-solid fa-circle"></i> Valid Prices</h5>
+        <div class="number-five">
+            <div class="one">RWF 1700</div>
+            <div class="one">RWF 3000</div>
+            <div class="one">RWF 9000</div>
+
+        </div>
+    </section>
+    
+
+
+    <section id="cards">
+         
+            <div class="export">
+                <h5><i class="fa-solid fa-circle"></i> Shop By Category</h5>
+                <h1>EXPORT CATEGORY OF RWANDAN COFFEE.</h1>
+    
+            </div>
+
+        <section class="number-six">
+            
+           
+    
+            <div class="web">
+                <img src="./coffee1.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Gorilla’s Coffee</h3>
+                    <p>Rwanda’s coffee delivers rich flavors, crafted with passion and pride.</p>
+                </div>
+            </div>
+    
+            <div class="web">
+                <img src="./coffee5.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Question Coffee</h3>
+                    <p>Every sip celebrates Rwanda’s heritage, quality, and beautiful traditions.</p>
+                </div>
+            </div>
+    
+            <div class="web">
+                <img src="./coffee11.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Bourbon Coffee</h3>
+                    <p>Taste Rwanda’s finest coffee, grown with love and dedication.</p>
+                </div>
+            </div>
+            <div class="web">
+                <img src="./coffee12.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Musasa Coffee</h3>
+                    <p>A delicious cup carrying Rwanda’s pride in every drop.</p>
+                </div>
+            </div>
+    
+            <div class="web">
+                <img src="./coffee13.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Café de Maraba</h3>
+                    <p>Rwanda’s coffee brings unforgettable aroma, smoothness, and authentic excellence.</p>
+                </div>
+            </div>
+    
+            <div class="web">
+                <img src="./coffee14.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Gold Kivu Coffee</h3>
+                    <p>Sip the pride of Rwanda, one beautiful cup at a time.</p>
+                </div>
+            </div>
+            
+            <div class="web">
+                <img src="./coffee15.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Iriza Coffee</h3>
+                    <p>From Rwanda’s fertile hills, comes coffee worth celebrating worldwide.</p>
+                </div>
+            </div>
+            <div class="web">
+                <img src="./coffee16.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Huye Coffee</h3>
+                    <p>Every bean tells Rwanda’s story of passion and excellence.</p>
+                </div>
+            </div>
+    
+            <div class="web">
+                <img src="./coffee6.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Kinunu Coffee</h3>
+                    <p>Enjoy Rwanda’s golden harvest, brewed into pure coffee perfection.</p>
+                </div>
+            </div>
+            <div class="web">
+                <img src="./coffee8.jfif" alt="name of juice" width="300" height="260" >
+                <div class="span">
+                    <h3>Rwanda Bean</h3>
+                    <p>Taste the heart of Rwanda, proudly served in every cup.</p>
+                </div>
+            </div>
+    
+            
+    
+    
+    
+        </section>
+    </section>
+    
+
+    <section class="number-seven">
+        <h1>BLOG</h1>
+        <h5><i class="fa-solid fa-circle"></i> Why Choose Us?</h5>
+        <div class="number-eight">
+            <h4>BETTER SERVICES ENABLES EMPATHATICS AND CAPTION...</h4>
+            <div class="number-nine">
+              
+                
+
+
+                <div class="para1">
+                    <h3>01</h3>
+                    <p>"Your Perfect Cup Starts Here – Shop Our Exclusive Collection of Authentic Rwandan Coffee Today!"</p>
+                </div>
+
+                <div class="para1">
+                    <h3>02</h3>
+                    <p>. "Experience the Taste of Rwanda – Discover Premium Coffee, Grown in the Heart of the Land of a Thousand Hills."</p>
+                </div>
+
+                <div class="para1">
+                    <h3>03</h3>
+                    <p>"From Rwanda's Rich Highlands to Your Cup – Enjoy Fresh, Authentic, and Naturally Delicious Coffee."</p>
+                </div>
+
+                <div class="para1">
+                    <h3>04</h3>
+                    <p>"Taste Excellence in Every Sip – We Bring You the Finest Quality Rwandan Coffee."</p>
+                </div>
+
+                <div class="para1">
+                    <h3>05</h3>
+                    <p>"Support Local Farmers, Enjoy Exceptional Coffee – Every Purchase Helps Empower Rwanda's Coffee-Growing Communities."</p>
+                </div>
+            
+            </div>
+
+            <div class="number-ten">
+                <video id="video" autoplay muted loop playsinline width="500" height="80%" >
+                    <source src="./AQNCb3tLA6VEsWsq4pOGLJeij5gKTfjD1mpRlcECpaZoJ-a8uLhRVxyPqSO7nCHYTdXq_M6OGRmu41aopwl7Yoin.mp4" type="video/mp4">
+                </video>
+                <div id="videos"></div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div id="partener">
+      <h5><i class="fa-solid fa-circle"></i> Global partenership</h5>
+
+    </div>
+     
+    <section class="number-eleven">
+        
+        <div class="number-twelve">
+
+            <div class="division"><img src="./r1.png" width="160"></div>
+            <div class="division"><img src="./r10.png" width="160"></div>
+            <div class="division"><img src="./r11.jfif" width="160"></div>
+            <div class="division"><img src="./r12.jfif" width="160"></div>
+            <div class="division"><img src="./r13.png" width="160"></div>
+            <div class="division"><img src="./r14.png" width="160"></div>
+            <div class="division"><img src="./r15.jfif" width="160"></div>
+            <div class="division"><img src="./r16.jfif" width="160"></div>
+            <div class="division"><img src="./r17.jfif" width="160"></div>
+            
+            
+
+
+        </div>
+
+        <div aria-hidden="true" class="number-twelve">
+
+            <div class="division"><img src="./r18.jfif" width="160"></div>
+            <div class="division"><img src="./r19.png" width="160"></div>
+            <div class="division"><img src="./r2.jfif" width="160"></div>
+            <div class="division"><img src="./r3.jfif" width="160"></div>
+            <div class="division"><img src="./r4.png" width="160"></div>
+            <div class="division"><img src="./r5.png" width="160"></div>
+            <div class="division"><img src="./r6.png" width="160"></div>
+            <div class="division"><img src="./r7.png" width="160"></div>
+            <div class="division"><img src="./r8.png" width="160"></div>
+
+
+
+        </div>
+
+    </section>
+    
+    <div id="side">
+       <h5><i class="fa-solid fa-circle"></i> Benefits from our products</h5>
+          
+    </div>
+    
+    <section id ="number-twenty-eight">
+
+        <div id ="number-twenty-nine">
+            <div id ="thirty">
+               <h5><i class="fa-solid fa-circle"></i> Different from others</h5>
+                
+                <h3>Discover Rwanda’s exceptional coffee, where unique flavors meet unmatched quality.</h3>
+   
+   
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Rwandan coffee offers rich flavors with exceptional natural sweetness.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Grown in volcanic soils, delivering distinctive and complex flavors.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>High-altitude cultivation produces premium-quality coffee beans.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Carefully handpicked beans ensure excellent quality and freshness.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Unique fruity notes create an unforgettable coffee experience.</p>
+   
+   
+               
+            </div>
+   
+            <div id ="thirtyyy">
+                <h5><i class="fa-solid fa-circle"></i> Tasty of coffee</h5>
+   
+                <h3>Experience Rwanda’s delicious coffee, featuring fruity, floral, sweet, and rich flavors.</h3>
+   
+   
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Rich fruity flavors create a refreshing coffee experience.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Delicate floral notes bring elegance to every sip</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Bright citrus acidity delivers a lively, balanced taste.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Natural sweetness offers delightful honey and caramel notes.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Smooth chocolate undertones create a satisfying finish.</p>
+   
+        
+                
+   
+            </div>
+   
+            <div id ="thirty">
+                <h5><i class="fa-solid fa-circle"></i> Ingradients</h5>
+   
+                <h3>Enjoy pure Rwandan Arabica coffee, naturally grown, carefully processed, freshly roasted.</h3>
+   
+   
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>100% pure Arabica coffee beans, carefully selected and roasted.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Naturally grown coffee beans, rich in authentic flavor</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993) ;font-size: 13px;margin-right: 5px;">✔</span>Premium roasted beans, preserving their natural coffee oils</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Pure ground coffee, without artificial flavors or additives</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Freshly harvested beans, delivering exceptional aroma and quality.</p>
+   
+   
+                
+   
+            </div>
+   
+        </div>
+    </section>
+
+
+<section id="number-sixteen">
+      
+    
+    <div id="number-seventeen">
+        <h1>TESTIMONIALS</h1>
+        <h5><i class="fa-solid fa-circle"></i> What Our Customers Say</h5>
+        <div id="number-eighteen">
+            <div id="number-nineteen">
+                <img src="./g1.jfif" width="70" height="60">
+                <h4>“Rwandan coffee has an amazing taste and aroma!”</h4>
+                <h6>"Tonny Caspel"</h6>
+           </div>
+ 
+           <div id="number-nineteen">
+             <img src="./g2.jfif" width="70" height="60">
+             <h4>“Every sip delivers freshness, sweetness, and pure satisfaction.”</h4>
+             <h6>"Adam Stevenson"</h6>
+
+           </div>
+ 
+             <div id="number-nineteen">
+              <img src="./g3.jfif"  width="70" height="60">
+              <h4>“The smooth flavor makes Rwandan coffee unforgettable!”</h4>
+              <h6>"Oliver Powel"</h6>
+
+             </div>
+
+        </div>
+          
+    </div>
+
+</section>
+
+
+<section id ="number-twenty">
+    <h1>MARKETING</h1>
+    <h5><i class="fa-solid fa-circle"></i> More reasons to make Rwandan coffee needed and exported.</h5>
+
+    <div id ="number-twenty-one">
+        <div id="number-twenty-two">
+            <img src="./hours.png" width="480">
+        </div>
+
+        <div id ="number-twenty-three">
+          
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Rwanda's coffee offers unique flavors attracting international buyers.</p>
+                
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>High-quality Arabica beans create strong global market demand.</p>
+
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Rwanda's volcanic soils produce distinctive and premium coffee.</p>
+
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>International exports create valuable opportunities for coffee businesses.</p>
+
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Rwanda's specialty coffee competes strongly in global markets.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id ="number-twenty-four">
+    
+
+    <h1>PRICING</h1>
+    <h5><i class="fa-solid fa-circle"></i> Random Price and Appropriate Quality Of The Product </h5>
+
+    <div id ="number-twenty-five">
+        
+        <div id ="number-twenty-six">
+          
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Experience Rwanda's finest coffee with excellent quality at affordable prices.</p>
+                
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Get fresh Rwandan coffee delivered at fair and competitive prices.</p>
+
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Enjoy world-class coffee without paying expensive international market prices.</p>
+
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Choose Rwanda's finest coffee for your home, business, or export needs.</p>
+
+                    <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Buy directly from Rwanda's coffee market and enjoy quality you can trust.</p>
+        </div>
+        
+
+
+        <div id ="number-twenty-six">
+          
+            <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Discover Rwanda's rich coffee heritage through affordable, high-quality coffee products.</p>
+        
+            <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Enjoy authentic Rwandan coffee, carefully selected for every coffee lover.</p>
+
+            <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>We connect coffee buyers with Rwanda's finest coffee producers.</p>
+
+            <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Find premium export-ready Rwandan coffee at reasonable market prices.</p>
+
+            <p><span style="color: rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Taste Rwanda's excellence through coffee sourced from its finest growing regions.</p>
+        </div>
+
+        
+        <div id="number-twenty-seven">
+            <img src="./business.png" width="480" >
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+<div id="sides">
+    <h1>OUR BRANCHES</h1>
+    <h5><i class="fa-solid fa-circle"></i> More About Branches And Location</h5>
+       
+ </div>
+ 
+ <section id ="number-twenty-eight">
+    
+     <div id ="number-twenty-nine">
+         <div id ="thirtyy">
+            <h5><i class="fa-solid fa-circle"></i> Discover Rwanda's finest beans</h5>
+             
+             <h3>We supply high-quality Arabica and Robusta coffee beans sourced from Rwanda's finest farms.</h3>
+
+
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>We provide premium Arabica coffee with exceptional taste and aroma.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Our coffee branches offer freshly roasted beans for every customer.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>We supply quality green coffee beans for international export markets.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Enjoy natural Rwandan coffee, carefully processed for excellent flavour.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>We connect customers with trusted coffee farmers across Rwanda.</p>
+
+
+             
+         </div>
+
+         <div id ="thirtyy" class="sixty" >
+             <h5><i class="fa-solid fa-circle"></i> Explore our export services</h5>
+
+             <h3>We roast, package, and export premium Rwandan coffee to local and international customers.</h3>
+
+
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Our services include coffee packaging, roasting, distribution, and delivery.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>We offer affordable coffee products for individuals and businesses.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>We provide wholesale and retail coffee solutions for everyone.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Discover specialty coffee sourced from Rwanda's finest growing regions.</p>
+             <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Our export services connect Rwandan coffee producers with global buyers.</p>
+
+     
+             
+         </div>
+
+         <div id ="thin" >
+
+           <img src="./business (3).png" width="480">
+             
+         </div>
+
+     </div>
+ </section>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <footer id ="number-twenty-eight">
+
+    
+    
+        <div id ="number-twenty-nine">
+            <div id ="thirtyy">
+               <h5><i class="fa-solid fa-circle"></i> Our Location</h5>
+                
+                <h3>Available location</h3>
+   
+   
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Rwandan coffee offers rich flavors with exceptional natural sweetness.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Grown in volcanic soils, delivering distinctive and complex flavors.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>High-altitude cultivation produces premium-quality coffee beans.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Carefully handpicked beans ensure excellent quality and freshness.</p>
+                <p><span style="color:  rgba(72, 255, 0, 0.993); font-size: 13px;margin-right: 5px;">✔</span>Unique fruity notes create an unforgettable coffee experience.</p>
+   
+   
+                
+            </div>
+   
+            <div id ="thirtyy" class="sixty" >
+                <h5><i class="fa-solid fa-circle"></i> Chats</h5>
+   
+                <h3>Our Social Medias</h3>
+   
+   
+                <p>Whatsapp</p>
+                <p>Facebook</p>
+                <p>Email</p>
+                <p>Twittw</p>
+                <p></p>
+
+               
+        
+                
+            </div>
+   
+            <div id ="thin" >
+                <h5><i class="fa-solid fa-circle"></i> Chats</h5>
+   
+                <h3>Our Social Medias</h3>
+   
+   
+                <p>Whatsapp</p>
+                <p>Facebook</p>
+                <p>Email</p>
+                <p>Twittw</p>
+                <p></p>
+
+            </div>
+   
+        </div>
+    
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
